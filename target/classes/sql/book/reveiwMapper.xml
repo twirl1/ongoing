@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.kosmo.jobkorea.book.dao.reviewDao">
+
+<!-- 리뷰 -->
+	<insert id="reviewReg">
+		insert into REVIEW(P_ID,loginID,rStar,rTitle,rContent,rDate) 
+		values(#{pId},#{loginId},#{rStar},#{rTitle},#{rContent},now())
+	</insert>
+	
+	<select id="reviewList" resultType="kr.kosmo.jobkorea.book.model.reviewModel">
+		select r.rId, 
+		P_ID as pId, 
+		r.loginID, 
+		rStar, 
+		`rLike`, 
+		rTitle, 
+		rContent,
+		DATE_FORMAT(rDate, '%Y-%m-%d') as rDate,
+		rDate as regTime
+		<if test="(loginId != null) and (!loginId.equals(''))">
+	    ,likeChk
+	    </if>
+		from REVIEW r left outer join REVEIW_LIKE l 
+	    on  r.rId= l.rId
+	    <if test="(loginId != null) and (!loginId.equals(''))">
+	    and l.loginID = #{loginId}
+	    </if>
+		where P_ID=#{pId}
+		<if test="(sort != null) and (!sort.equals(''))">
+		order by ${sort}
+		</if>
+		LIMIT #{pageIndex}, #{pageSize} 
+	</select>
+	
+	<select id="reviewCount" resultType="Integer">
+		select count(rId) from REVIEW
+		where P_ID=#{pId}
+	</select>
+	
+	
+	<delete id="reviewDel">
+		delete from REVIEW where rId=#{rId}
+	</delete>
+	
+	
+	<!--좋아요  -->
+	<update id="reviewLike">
+		update REVIEW 
+		SET `rLike`=`rLike`${like}
+		where rId=#{rId}
+	</update>
+	
+	
+	<insert id="likeChk">
+			INSERT INTO REVEIW_LIKE(
+		      rId
+		    , loginId
+		    , likeChk
+		) VALUES (
+		      #{rId}
+		    , #{loginId}
+		    , #{like}
+		)
+		ON DUPLICATE KEY UPDATE
+		    likeChk = #{like};
+	</insert>
+
+</mapper>

@@ -1,0 +1,234 @@
+.col-sm-4,.col-sm-6{
+	margin: 5px 0 5px 0; 
+}
+
+.col-sm-4{
+	width:0px;
+}
+
+ .thead{
+background-color:rgb(255, 204, 0); 
+} 
+
+/*  상품 수정창*/
+.input-group {
+	width:500px;
+}
+.textarea{
+	height:150px;
+}
+
+.input-group-text{
+	width:110px;
+}
+
+.select_img{
+	margin: 20px;
+}
+
+/*  상품 리스트 */
+
+.catagory-name {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:normal;
+  width:270px;
+  height:30px;
+}
+
+.author{
+  overflow:hidden;
+  text-overflow: ellipsis;
+   white-space:nowrap;
+  font-size: 14px;
+}
+
+.card-header{
+	background-color:#e6b800 !important;
+	
+}
+
+.cateHedaer{
+	background-color:#000000 !important;
+	
+}
+
+.card-header h5{
+	color:white;
+	font-weight: bolder;
+}
+
+
+.list-group-item:hover{ color:#e6b800; }
+
+input[readonly]{
+    background-color: yellow;
+}
+/* 검색 */
+
+.sSelect{
+	width:150px;
+	height:40px;
+	display:inline !important;
+} 
+
+.sInput{
+	width:300px;
+	height:40px;
+	display:inline !important;
+} 
+
+
+.sBtn{
+	width:150px;
+	height:40px;
+	color:white;
+	background-color:#e6b800;
+}
+
+ /* 별점   */
+.star0{
+  background: url(/img/star/star0.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.star1{
+  background: url(/img/star/star1.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.star2{
+  background: url(/img/star/star2.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.star3{
+  background: url(/img/star/star3.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.star4{
+  background: url(/img/star/star4.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.star5{
+  background: url(/img/star/star5.png) no-repeat;
+  background-size: 100px;
+  width: 120px;
+  height: 55px;
+  display:inline-block;
+}
+
+.starImg{
+  width: 100px;
+  height: 24px;
+}
+
+.star p{
+	margin-left:105px;
+	width:120px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/* 별점 끝 */
+
+.uBoder{
+	border-style:GROOVE;
+	border-width:5px;
+	padding:20px;
+	border-radius:20px;
+}	
+
+pre{
+	font-size:18px;
+	font-family: 'Muli', sans-serif;
+	line-height: 30px;
+	overflow: auto;
+	white-space: pre-wrap; !important
+}
+
+
+/* 별점 라디오버튼 */
+
+.box-radio-input input[type="radio"]{
+  display:none;
+  height: 30px;
+}
+
+.radioNoStar{
+  	display:inline-block;
+	 background: url(/img/star/nostar.png) no-repeat;
+	        border: none;
+	        background-size: 35px;
+			width: 30px;
+			height: 30px;
+	        cursor: pointer;
+}
+
+.radioStar{
+  	display:inline-block;
+	 background: url(/img/star/star.png) no-repeat;
+	        border: none;
+	        background-size: 35px;
+			width: 30px;
+			height: 30px;
+	        cursor: pointer;
+}
+
+
+/* 리뷰 */
+
+#reviewTitle{
+	font-weight:700;
+	margin-top:10px;
+}
+
+#reviewTitle{
+	margin:10px 0 10px 0;
+}
+
+
+.icon_heart,.icon_heart_alt{
+	color:red;
+}
+
+#reviewDate{
+	color:gray;font-size: 12px;margin-left:10px;
+}
+
+      
+ #rcon{
+ font-weight:400 !important;
+ font-size:16px; !important;
+  width        : 800px;     /* 너비는 변경될수 있습니다. */
+  text-overflow: ellipsis;  /* 위에 설정한 100px 보다 길면 말줄임표처럼 표시합니다. */
+  white-space  : nowrap;    /* 줄바꿈을 하지 않습니다. */
+  overflow     : hidden;    /* 내용이 길면 감춤니다 */
+  display      : block;     /* ie6이상 현재요소를 블럭처리합니다. */
+}
+
+
+ /* 한정상품 */
+ .limitText{
+ 	 background-color: white; 
+ 	 padding: 30px;
+ 	 border-radius:20px;    
+ }
+ 
