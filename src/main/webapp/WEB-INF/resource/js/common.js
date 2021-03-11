@@ -72,21 +72,24 @@ function getPaginationHtml(currentPage, totalCount, pageRow, blockPage, pageFunc
 
 
 
+if (typeof jQuery === 'undefined') {
+	 // throw new Error('Bootstrap\'s JavaScript requires jQuery')
+}
 
-
-
-
-$.browser={};(function(){
-    jQuery.browser.msie=false;
-    $.browser.version=0;if(navigator.userAgent.match(/MSIE ([0-9]+)\./)){
-    $.browser.msie=true;jQuery.browser.version=RegExp.$1;}
-})();
+//$.browser={};
+//$.browser={};(function(){
++function ($, jQuery) {	
+    //jQuery.browser.msie=false;
+    //$.browser.version=0;if(navigator.userAgent.match(/MSIE ([0-9]+)\./)){
+    //$.browser.msie=true;jQuery.browser.version=RegExp.$1;}
+}();
+//})();
 /**
  * datepicker setting
  *
  */
 
-$.datepicker.regional['ko'] = {
+/*$.datepicker.regional['ko'] = {
     dateFormat: 'yy.mm.dd',
     prevText: '이전 달',
     nextText: '다음 달',
@@ -104,7 +107,7 @@ $.datepicker.regional['ko'] = {
 	currentText: "today",
 	closeText : 'close'	
 };
-$.datepicker.setDefaults($.datepicker.regional['ko']);
+$.datepicker.setDefaults($.datepicker.regional['ko']);*/
 
 
 

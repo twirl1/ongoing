@@ -139,7 +139,7 @@
     var timerdate = '2021/10/10';
     // For demo preview end
 
-    console.log(timerdate);
+    //console.log(timerdate);
     
 
     // Use this for real timer date

@@ -130,8 +130,8 @@ function flist_goods(currentPage) {
 	const cateClass=$("#cateClass").val();
 	const cateId=$("#cateId").val();
 	
-	console.log("cateClass:"+cateClass);
-	console.log("cateId:"+cateId);
+	/* console.log("cateClass:"+cateClass);
+	console.log("cateId:"+cateId); */
 		
 	var param = {	
 			currentPage : currentPage,
@@ -147,8 +147,8 @@ function flist_goods(currentPage) {
 		flist_goods_result(data, currentPage);
 	};
 	
-	console.log(param);
-	console.log(resultCallback);
+	/* console.log(param);
+	console.log(resultCallback); */
 
 	callAjax("/event/eventList.do", "post", "text", true, param,
 			resultCallback);
@@ -166,7 +166,7 @@ function flist_goods_result(data, currentPage) {
 
 	// 총 개수 추출
 	var totalCnt = $("#totalCnt").val();
-	console.log("토탈카운트:"+totalCnt);
+	//console.log("토탈카운트:"+totalCnt);
 	//$(".count").text(totalCnt);
 
 	// 페이지 네비게이션 생성
