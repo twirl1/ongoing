@@ -25,7 +25,7 @@
 		<result property="totalpay" column="M_PAY"/>
 		<result property="bkname" column="M_BKNAME"/>
 		<result property="status" column="M_STATUS"/>
-		<result property="a_id" column="A_ID"/>
+		<!-- <result property="a_id" column="A_ID"/> -->
 		<result property="a_TITLE" column="A_TITLE"/>
 		<result property="user_post" column="A_AD1"/>
 		<result property="addr" column="A_AD2"/>
@@ -43,7 +43,7 @@
 		      	,A_AD1
 				,A_AD2
 				,A_AD3
-				,A_ID
+				<!-- ,A_ID -->
 				,A_TITLE
 				,M_ACCOUNT
 				,M_BIRTH
