@@ -82,7 +82,6 @@ public class EventController {
 	public 	String getEventDetail(Model model, @ModelAttribute EventModel e_id
 			) throws Exception {
 		List<EventModel> evBannerById = eventsv.eventDetail(e_id);
-		System.out.println("## evBannerById 값은 ? ##"+evBannerById);
 		model.addAttribute("evBannerById", evBannerById);
 		
 		return "event/eventDetail";
@@ -90,8 +89,7 @@ public class EventController {
 	}
 	
 	@RequestMapping(value="insertData.do")	
-//	@ResponseBody
-	public String insertData( EventModel vo) throws Exception {		
+	public String insertData( EventModel vo) throws Exception {
 		eventsv.insertData(vo);		
 			
 		return "redirect:/event/eventListPage.do";

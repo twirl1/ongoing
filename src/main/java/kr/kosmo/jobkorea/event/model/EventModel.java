@@ -8,13 +8,6 @@ import lombok.Data;
 @Data
 public class EventModel {
 	
-//		public EventModel(){
-//			this.e_title = e_title;
-//			this.e_content = e_content;
-//			this.thumnail_img = thumnail_img;
-//			this.detail_banner = detail_banner;			
-//		}
-	
 		private int e_id;
 		private String e_title;
 		private Date e_sdate;

@@ -17,23 +17,21 @@
 			.img {   width: 960px;  aspect-ratio: auto 960 / 2240; height: 2240px;}			
       </style>
  </head>
-<%--  evBannerById: ${evBannerById } --%>
 <div class="wrap">	
 	<c:forEach var="list" items="${evBannerById }" varStatus="status">
 		<div class="wrap2">
-	    	<a href="#" onclick="insertData('${list.e_id}' , '${list.e_title}', '${list.e_content}', '${list.thumnail_img}', '${list.detail_banner}' );" class="primary-btn pd-cart text-center">카트 담기</a>
-	    </div>
-		<img class="img" src="${list.detail_banner}" />
+	    	<a href="#" onclick="insertData('${list.e_id}' , '${list.e_title}', '${list.e_content}', '${list.thumnail_img}', '${list.detail_banner}' );" class="primary-btn pd-cart text-center">삽입테스트</a>	    	
+	    </div>	    
+		<img class="img" src="${list.detail_banner}">
 	</c:forEach>
 </div>
 <script>
 function insertData(e_id, e_title, e_content, thumnail_img, detail_banner) {
-	console.log(e_id, e_title, thumnail_img);
 	location.href="/event/insertData.do?e_id="+e_id+
 						"&e_title="+e_title + 
 						"&e_content="+e_content +
 						"&thumnail_img="+thumnail_img +
-						"&detail_banner="+detail_banner; 
-}
+						"&detail_banner="+detail_banner;
+} 
 </script>
-  <jsp:include page="/WEB-INF/view/common/footer.jsp"/>
+ <jsp:include page="/WEB-INF/view/common/footer.jsp"/>
